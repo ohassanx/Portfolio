@@ -1,0 +1,11 @@
+:root {
+  --animate-delay: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #bdbdbd;
+  background-color: #2d3436;
+}
