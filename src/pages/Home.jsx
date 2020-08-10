@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
+<<<<<<< HEAD
+import { FaGithubAlt, FaLinkedin, FaEnvelope } from "react-icons/fa";
+=======
 import { FaGithubAlt, AiFillLinkedin, FaEnvelope } from "react-icons/fa";
+>>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
 import styled, { keyframes } from "styled-components/macro";
 
 const word =
@@ -50,7 +54,11 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <IconContext.Provider value={IconContextValue}>
+<<<<<<< HEAD
+              <FaLinkedin />
+=======
               <AiFillLinkedin />
+>>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
             </IconContext.Provider>
           </FloatLinkedIn>
         </li>
