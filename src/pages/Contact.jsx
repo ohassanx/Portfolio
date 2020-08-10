@@ -1,10 +1,6 @@
 import React from "react";
 import { IconContext } from "react-icons";
-<<<<<<< HEAD
 import { FaGithubAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-=======
-import { FaGithubAlt, FaLine, FaEnvelope } from "react-icons/fa";
->>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
 import styled from "styled-components/macro";
 
 export default function Contact() {
@@ -15,11 +11,7 @@ export default function Contact() {
         <ContentBox>
           <h1>Contact</h1>
           <b className="d-block mb-4">
-<<<<<<< HEAD
             If you want to message me regarding a job or project. You can contact me
-=======
-            If you wanna message me regarding a job or project. You can contact me
->>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
             from below.
           </b>
           <h5>
@@ -30,15 +22,9 @@ export default function Contact() {
                 size: 35,
               }}
             >
-<<<<<<< HEAD
               <FaWhatsapp />
             </IconContext.Provider>
             <span className="ml-2">: 07949254578</span>
-=======
-              <FaLine />
-            </IconContext.Provider>
-            <span className="ml-2">: notsumet1</span>
->>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
           </h5>
           <h5>
             <IconContext.Provider

@@ -1,19 +1,14 @@
 import React from "react";
-import Box from "../components/portfolio/Box";
+import Box from "../components/projects/Box";
 import styled from "styled-components/macro";
 
-export default function portfolio() {
+export default function projects() {
   return (
     <Container>
       <h1>Web Developer Portfolio</h1>
       <b className="d-block mb-4">
-<<<<<<< HEAD
         These are some of the projects i have created. I created using languages such as HTML, CSS, JavaScript, React.js, React Native, Node.js, Redux,
         PHP, MySQL, and MongoDB.
-=======
-        These are my projects. I created using HTML CSS JS React.js React Native Node.js Redux
-        PHP MySQL MongoDB
->>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
       </b>
       <small className="d-block mb-2">Hover the image for information.</small>
       <div className="row">
@@ -23,11 +18,7 @@ export default function portfolio() {
           frontEnd="HTML,JavaScript"
           backBnd="PHP"
           dataBase="MySQL"
-<<<<<<< HEAD
           css=""
-=======
-          css="Bulma"
->>>>>>> c0d43fca827b2e2c097e0c58df268319664badf3
           host="Github"
           repo="https://github.com/ohassanx/Portfolio-Blog"
           website="http://webprojects.eecs.qmul.ac.uk/oha31/portfolio/"
