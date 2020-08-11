@@ -13,7 +13,7 @@ export default function Nav() {
         </LinkStyled>
       </li>
       <li>
-        <LinkStyled location={location} to="/portfolio">
+        <LinkStyled location={location} to="/projects">
           Portfolio
         </LinkStyled>
       </li>
