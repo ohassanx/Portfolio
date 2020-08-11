@@ -14,7 +14,7 @@ export default function Nav() {
       </li>
       <li>
         <LinkStyled location={location} to="/projects">
-          Portfolio
+          Projects
         </LinkStyled>
       </li>
       <li>
