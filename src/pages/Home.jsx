@@ -4,7 +4,7 @@ import { FaGithubAlt, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
 
 const word =
-  "I'm looking for a Junior Developer role. I'm interested Front-end, React.js, React Native and Back-end, Node.js, MongoDB. If you looking for a Junior Developer contact me, please.";
+  "I'm looking for a Junior Front End Developer role. I am interested mainly in HTML, CSS, JavaScript, React.js, React Native. However, I also have experience working with Node.js, Express.js, Redux.js and MongoDB. If you looking for a Junior Front End Developer contact me, please.";
 
 export default function Home() {
   const [typewriter, setTypewriter] = useState({ index: 0, text: "" });

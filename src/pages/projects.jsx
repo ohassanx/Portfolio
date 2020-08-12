@@ -24,7 +24,7 @@ export default function projects() {
           website="http://webprojects.eecs.qmul.ac.uk/oha31/portfolio/"
         />
         <Box
-          img={require("../assets/website/Weather.png")}
+          img={require("../assets/website/Weather.jpg")}
           title="Weather App"
           frontEnd="React Native"
           backBnd=""
@@ -35,7 +35,7 @@ export default function projects() {
           website=""
         />
         <Box
-          img={require("../assets/website/employee.png")}
+          img={require("../assets/website/employee.jpg")}
           title="Employee App"
           frontEnd="React Native"
           backBnd="Node.js"
@@ -46,15 +46,15 @@ export default function projects() {
           website=""
         />
         {/* <Box
-          img={require("../assets/website/restaurant.png")}
-          title="CRUD Restaurant"
-          frontEnd="Vue.js"
-          backBnd="Golang"
-          dataBase="PostgreSQL"
-          css="Bootstrap 4"
-          host="Heroku"
-          repo="https://github.com/SumetPH/next-isr"
-          website="https://go-restaurant-sumetph.herokuapp.com/"
+          img={require("../assets/website/amazon.jpg")}
+          title="Amazon Clone"
+          frontEnd="React.js"
+          backBnd=""
+          dataBase="FireBase"
+          css="CSS3"
+          host="Firebase"
+          repo="https://github.com/ohassanx/amazon-clone"
+          website="https://clone-b224b.web.app/"
         /> */}
       </div>
     </Container>

@@ -26,8 +26,8 @@ export default function Box({
                 </BtnRepo>
               </li>
               <li>
-                <BtnWebsite
-                  href={website}
+                <BtnWebsite 
+                  href={website ? website : null}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
