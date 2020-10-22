@@ -24,6 +24,17 @@ export default function projects() {
           website="http://webprojects.eecs.qmul.ac.uk/oha31/portfolio/"
         />
         <Box
+          img={require("../assets/website/flashcard.jpg")}
+          title="Flashcard"
+          frontEnd="React.js"
+          backBnd="Node.js"
+          dataBase="Cloud Firestore"
+          cssFramework="Bulma"
+          host="Heroku"
+          repo="https://github.com/ohassanx/flashcards"
+          website="https://flashcard310.herokuapp.com"
+        />
+        <Box
           img={require("../assets/website/Weather.jpg")}
           title="Weather App"
           frontEnd="React Native"
@@ -45,7 +56,7 @@ export default function projects() {
           repo="https://github.com/ohassanx/Employee"
           website=""
         />
-        {/* <Box
+        <Box
           img={require("../assets/website/amazon.jpg")}
           title="Amazon Clone"
           frontEnd="React.js"
@@ -54,8 +65,8 @@ export default function projects() {
           css="CSS3"
           host="Firebase"
           repo="https://github.com/ohassanx/amazon-clone"
-          website="https://clone-b224b.web.app/"
-        /> */}
+          website="https://clone-74fb5.web.app/"
+        /> 
       </div>
     </Container>
   );
@@ -67,4 +78,15 @@ const Container = styled.div`
     padding: 100px 10%;
     height: auto;
   }
+`;
+
+const RowAnimation = keyframes`
+  100% {
+    margin-top: 0;
+  }
+`;
+
+const Row = styled.div`
+  animation: ${RowAnimation} 0.5s forwards;
+  margin-top: 100px;
 `;

@@ -2,30 +2,51 @@ import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
+import { TweenMax, TimelineMax } from "gsap";
 
 const word =
-  "I'm looking for a Junior Front End Developer role. I am interested mainly in HTML, CSS, JavaScript, React.js, React Native. However, I also have experience working with Node.js, Express.js, Redux.js and MongoDB. If you looking for a Junior Front End Developer contact me, please.";
-
+  "I am graduating in 2021 from a Russell Group University. I am looking for a job in Web Development. I'm interested Front-end, React.js, React Native and Back-end - Node.js, MongoDB, AWS Amplify. If you looking for a Web Developer contact me, please.";
 export default function Home() {
   const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
   const [typing, setTyping] = useState(true);
+  const [btnProjectDisplay, setBtnProjectDisplay] = useState(false);
+
+  const loadBar = useRef();
+  const floatLine = useRef();
+  const floatGithub = useRef();
+  const floatGmail = useRef();
+  const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
+  const [btnProjectDisplay, setBtnProjectDisplay] = useState(false);
 
   useEffect(() => {
-    typewriterFunc();
-  });
-
-  const typewriterFunc = () => {
     if (typewriter.index < word.length) {
       setTimeout(() => {
         setTypewriter({
           index: typewriter.index + 1,
-          text: typewriter.text + word.charAt(typewriter.index)
+          text: typewriter.text + word.charAt(typewriter.index),
         });
-      }, 30);
+      }, 15);
     } else {
-      setTyping(false);
+      TweenMax.to(loadBar.current, 0.5, { css: { opacity: 0 } });
+      setBtnProjectDisplay(true);
     }
-  };
+  }, [typewriter]);
+
+  useEffect(() => {
+    const tl = new TimelineMax({ paused: true });
+    tl.to(floatLine.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    });
+    tl.to(floatGithub.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    });
+    tl.to(floatGmail.current, {
+      duration: 0.5,
+      css: { marginLeft: 0 },
+    }).play();
+  }, []);
 
   return (
     <div>
@@ -39,9 +60,15 @@ export default function Home() {
           <Description>
             <p>{typewriter.text}</p>
           </Description>
+          <BtnProject
+            to="/portfolio"
+            className="animate__animated animate__fadeIn animate__delay-1s"
+            show={btnProjectDisplay ? "block" : "none"}
+          >
+            See all project
+          </BtnProject>
         </Content>
       </Container>
-
       <Float>
         <li>
           <FloatLinkedIn
@@ -81,9 +108,21 @@ export default function Home() {
   );
 }
 
+const BtnProject = styled(Link)`
+  display: ${(props) => props.show};
+  border: 0;
+  border-radius: 10px;
+  background-color: #7a915f;
+  padding: 10px;
+  text-decoration: none !important;
+  &:hover {
+    color: inherit;
+  }
+`;
+
 const IconContextValue = {
   size: 30,
-  style: { color: "#fefefe" }
+  style: { color: "#fefefe" },
 };
 
 const Container = styled.div`
@@ -126,37 +165,31 @@ const LoadBar = styled.div`
   animation: ${LoadBarAnimation} 2s ease-in infinite alternate-reverse;
 `;
 
-const FloatAnimation = keyframes`
-  100% {
-    left: 0;
-  }
-`;
-
 const Float = styled.ul`
   position: fixed;
-  left: -100px;
+  left: 0;
   bottom: 3%;
   padding: 0;
   margin: 0;
   list-style-type: none;
   z-index: 1;
-  animation: ${FloatAnimation} 1s ease-in 1s forwards;
 `;
 
-const FloatLinkedIn = styled.a`
+const FloatLine = styled.a`
   background-color: #00ae2c;
   display: inline-block;
   padding: 10px;
+  margin-left: -50px;
   transition: all 0.2s ease-in-out;
   &:hover {
     padding-left: 30px;
   }
 `;
 
-const FloatGithub = styled(FloatLinkedIn)`
+const FloatGithub = styled(FloatLine)`
   background-color: #4e545a;
 `;
 
-const FloatEmail = styled(FloatLinkedIn)`
+const FloatGmail = styled(FloatLine)`
   background-color: #c2392a;
 `;
