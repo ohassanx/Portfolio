@@ -59,11 +59,11 @@ const word =
             <p>{typewriter.text}</p>
           </Description>
           <BtnProject
-            to="/portfolio"
+            to="/projects"
             className="animate__animated animate__fadeIn animate__delay-1s"
             show={btnProjectDisplay ? "block" : "none"}
           >
-            See all project
+            See all projects
           </BtnProject>
         </Content>
       </Container>
@@ -126,7 +126,22 @@ const IconContextValue = {
   style: { color: "#fefefe" },
 };
 
+// const Container = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 const Container = styled.div`
+  background-image: url(${(props) => props.img});
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   display: flex;
