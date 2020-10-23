@@ -3,7 +3,7 @@ import Box from "../components/projects/Box";
 import styled, { keyframes } from "styled-components/macro";
 export default function projects() {
   return (
-    <Container>
+    <Container img={require("../assets/bg/contact.jpg")}>
       <h1>Web Developer Portfolio</h1>
       <b className="d-block mb-4">
         These are some of the projects i have created. I created using languages such as HTML, CSS, JavaScript, React.js, React Native, Node.js, Redux,

@@ -24,7 +24,7 @@ const word =
           index: typewriter.index + 1,
           text: typewriter.text + word.charAt(typewriter.index),
         });
-      }, 15);
+      }, 30);
     } else {
       TweenMax.to(loadBar.current, 0.5, { css: { opacity: 0 } });
       setBtnProjectDisplay(true);
@@ -50,7 +50,7 @@ const word =
   return (
     <div>
  <LoadBar ref={loadBar} />
-      <Container>
+      <Container img={require("../assets/bg/contact.jpg")}>
         <Content>
           <h1 className="animate__animated animate__fadeInRight">
             Hello, My name is Omar Hassan Abdi.
