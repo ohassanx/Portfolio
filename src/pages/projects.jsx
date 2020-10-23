@@ -71,28 +71,33 @@ export default function projects() {
   );
 }
 
-// const Container = styled.div`
-//   padding: 100px 20%;
-//   @media (max-width: 1200px) {
-//     padding: 100px 10%;
-//     height: auto;
-//   }
-// `;
 const Container = styled.div`
-  background-image: url(${(props) => props.img});
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 100px 20%;
   @media (max-width: 1200px) {
     padding: 100px 10%;
     height: auto;
   }
 `;
+// const Container = styled.div`
+//   background-image: url(${(props) => props.img});
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   padding: 100px 20%;
+//   @media (max-width: 1200px) {
+//     padding: 100px 10%;
+//     height: auto;
+//   }
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
 const RowAnimation = keyframes`
   100% {

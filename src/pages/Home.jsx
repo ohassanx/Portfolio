@@ -6,7 +6,7 @@ import styled, { keyframes } from "styled-components/macro";
 import { TweenMax, TimelineMax } from "gsap";
 
 const word =
-  "I am graduating in 2021 from a Russell Group University. I am looking for a job in Web Development. I'm interested Front-end, React.js, React Native and Back-end - Node.js, MongoDB, AWS Amplify. If you looking for a Web Developer contact me, please.";
+  "I am graduating in 2021 from a Russell Group University with a Computer Science BSc Degree. I am looking for a job as a Graduate Developer. I'm interested Front-end, React.js, React Native and Back-end - Node.js, MongoDB, AWS Amplify. I am also familiar with Java, Python and C++. If you looking for a Graduate Developer contact me. Thank you for your time.";
 
   export default function Home() {
 

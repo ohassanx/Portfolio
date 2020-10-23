@@ -24,7 +24,7 @@ export default function Contact() {
             >
               <FaWhatsapp />
             </IconContext.Provider>
-            <span className="ml-2">: 07949254578 (Only WhatsApp as my number for calls is on my CV)</span>
+            <span className="ml-2">: 07949254578 WhatsApp Only</span>
           </h5>
           <h5>
             <IconContext.Provider
