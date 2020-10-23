@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaGithubAlt, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
@@ -6,15 +7,13 @@ import { TweenMax, TimelineMax } from "gsap";
 
 const word =
   "I am graduating in 2021 from a Russell Group University. I am looking for a job in Web Development. I'm interested Front-end, React.js, React Native and Back-end - Node.js, MongoDB, AWS Amplify. If you looking for a Web Developer contact me, please.";
-export default function Home() {
-  const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
-  const [typing, setTyping] = useState(true);
-  const [btnProjectDisplay, setBtnProjectDisplay] = useState(false);
+
+  export default function Home() {
 
   const loadBar = useRef();
-  const floatLine = useRef();
+  const floatLinkedIn = useRef();
   const floatGithub = useRef();
-  const floatGmail = useRef();
+  const floatEmail = useRef();
   const [typewriter, setTypewriter] = useState({ index: 0, text: "" });
   const [btnProjectDisplay, setBtnProjectDisplay] = useState(false);
 
@@ -34,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     const tl = new TimelineMax({ paused: true });
-    tl.to(floatLine.current, {
+    tl.to(floatLinkedIn.current, {
       duration: 0.5,
       css: { marginLeft: 0 },
     });
@@ -42,7 +41,7 @@ export default function Home() {
       duration: 0.5,
       css: { marginLeft: 0 },
     });
-    tl.to(floatGmail.current, {
+    tl.to(floatEmail.current, {
       duration: 0.5,
       css: { marginLeft: 0 },
     }).play();
@@ -50,8 +49,7 @@ export default function Home() {
 
   return (
     <div>
-      {typing ? <LoadBar /> : null}
-
+ <LoadBar ref={loadBar} />
       <Container>
         <Content>
           <h1 className="animate__animated animate__fadeInRight">
@@ -72,6 +70,7 @@ export default function Home() {
       <Float>
         <li>
           <FloatLinkedIn
+            ref={floatLinkedIn}
             href="https://www.linkedin.com/in/omar-hassan-abdi-545525180/"
             target="_blanSk"
             rel="noopener noreferrer"
@@ -83,6 +82,7 @@ export default function Home() {
         </li>
         <li>
           <FloatGithub
+            ref={floatGithub}
             href="https://github.com/ohassanx"
             target="_blank"
             rel="noopener noreferrer"
@@ -94,6 +94,7 @@ export default function Home() {
         </li>
         <li>
           <FloatEmail
+           ref={floatEmail}
             href="mailto:omarhassan2810@hotmail.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -175,7 +176,7 @@ const Float = styled.ul`
   z-index: 1;
 `;
 
-const FloatLine = styled.a`
+const FloatLinkedIn = styled.a`
   background-color: #00ae2c;
   display: inline-block;
   padding: 10px;
@@ -186,10 +187,10 @@ const FloatLine = styled.a`
   }
 `;
 
-const FloatGithub = styled(FloatLine)`
+const FloatGithub = styled(FloatLinkedIn)`
   background-color: #4e545a;
 `;
 
-const FloatGmail = styled(FloatLine)`
+const FloatEmail = styled(FloatLinkedIn)`
   background-color: #c2392a;
 `;

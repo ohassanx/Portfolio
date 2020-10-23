@@ -1,7 +1,6 @@
 import React from "react";
 import Box from "../components/projects/Box";
-import styled from "styled-components/macro";
-
+import styled, { keyframes } from "styled-components/macro";
 export default function projects() {
   return (
     <Container>
