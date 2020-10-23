@@ -34,6 +34,17 @@ export default function projects() {
           website="https://flashcard310.herokuapp.com"
         />
         <Box
+          img={require("../assets/website/amazon.jpg")}
+          title="Amazon Clone"
+          frontEnd="React.js"
+          backBnd=""
+          dataBase="FireBase"
+          css="CSS3"
+          host="Firebase"
+          repo="https://github.com/ohassanx/amazon-clone"
+          website="https://clone-74fb5.web.app/"
+        /> 
+        <Box
           img={require("../assets/website/Weather.jpg")}
           title="Weather App"
           frontEnd="React Native"
@@ -55,17 +66,6 @@ export default function projects() {
           repo="https://github.com/ohassanx/Employee"
           website=""
         />
-        <Box
-          img={require("../assets/website/amazon.jpg")}
-          title="Amazon Clone"
-          frontEnd="React.js"
-          backBnd=""
-          dataBase="FireBase"
-          css="CSS3"
-          host="Firebase"
-          repo="https://github.com/ohassanx/amazon-clone"
-          website="https://clone-74fb5.web.app/"
-        /> 
       </div>
     </Container>
   );
